@@ -19,9 +19,9 @@ createInitFile(){
 replaceImports(){
     for i in "${pyfiles[@]}"
   do
-      sed -i 's/from phenopackets.schema.v2.core/from . /g' "$TEMP_DIRECTORY_PYTHON_MODULE/${i}_pb2.py"
-      sed -i 's/from ga4gh.vrsatile.v1/from . /g' "$TEMP_DIRECTORY_PYTHON_MODULE/${i}_pb2.py"
-      sed -i 's/from ga4gh.vrs.v1/from . /g' "$TEMP_DIRECTORY_PYTHON_MODULE/${i}_pb2.py"
+      sed -i.bk 's/from phenopackets.schema.v2.core/from . /g' "$TEMP_DIRECTORY_PYTHON_MODULE/${i}_pb2.py"
+      sed -i.bk 's/from ga4gh.vrsatile.v1/from . /g' "$TEMP_DIRECTORY_PYTHON_MODULE/${i}_pb2.py"
+      sed -i.bk 's/from ga4gh.vrs.v1/from . /g' "$TEMP_DIRECTORY_PYTHON_MODULE/${i}_pb2.py"
   done
 }
 

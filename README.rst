@@ -190,20 +190,22 @@ Sign artefacts for release
 ==========================
 There is a ``release-sign-artifacts`` profile for **Java** which can be triggered with the command
 
-.. code:: bash
+.. code::bash
 
     $ ./mvnw clean install -DperformRelease=true
 
-The **Python** artefacts are released by running::
+The **Python** artefacts are released by running:
 
 Test
 
-.. code::bash
+.. code:: bash
+
     $ bash deploy-python.sh release-test
 
 Production
 
-.. code::bash
+.. code:: bash
+
     $ bash deploy-python.sh release-prod
 
 Java, Python and C++ artefacts
